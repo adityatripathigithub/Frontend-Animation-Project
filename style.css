@@ -48,21 +48,46 @@ nav button {
     width: 19%;
     height: 35%;
     background-color: transparent;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-bottom: 5.5%;
     border: none;
     border-radius: 30px;
-    font-size: 1.1vw;
+    font-size: 1.3vw;
     border: 2px solid white;
-    transition: all ease 0.2s;
+    transition: all ease 0.5s;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-nav button:hover {
+nav button h3{
+    z-index: 999;
+}
+
+nav button .color{
+    width: 100%;
+    height: 100%;
     background-color: #ec973a;
-    border: none;
+    position: absolute;
+    top: 70%;
+    scale: 0.1;
+    transition: all ease 0.4s;
+    z-index: -9999; 
+    border-radius: 30px;
+
 }
 
+nav button:hover{
+    border:2px solid #ec973a;
+    color: black;
+}
+
+nav button:hover .color{
+    position: absolute;
+    top: 0;
+    scale: none;
+    border:2px solid #ec973a;
+}
 /* 
 .page1 .box {
     width: 13%;
@@ -199,7 +224,7 @@ nav button:hover {
 }
 
 
-#page2-pera2{
+.page2 p:nth-child(4){
     position: absolute;
     top: 60%;
     left: 55%;
